@@ -12,7 +12,7 @@ function AuthorsList() {
   const authorCards = authorStore.filteredAuthors.map(author => (
     <AuthorCard key={author.id} author={author} />
   ));
-
+  // console.log(authorStore.filteredAuthors);
   return (
     <div>
       <h3>Authors</h3>
