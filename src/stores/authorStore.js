@@ -8,6 +8,8 @@ const instance = axios.create({
 class AuthorStore {
   authors = [];
 
+  author = null;
+
   loading = true;
 
   query = "";
@@ -36,6 +38,7 @@ class AuthorStore {
 
 decorate(AuthorStore, {
   authors: observable,
+  author: observable,
   loading: observable,
   query: observable,
   filteredAuthors: computed

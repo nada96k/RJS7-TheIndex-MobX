@@ -13,10 +13,7 @@ function BookRow(props) {
   const availableButton = (
     <button
       className={`btn btn-${book.available ? "success" : "danger"}`}
-      onClick={
-        () => alert("You need to make me 🎵 work work work work work 🎵")
-        //{bookStore.toggle}
-      }
+      onClick={() => (book.available = !book.available)}
     >
       {book.available ? "borrow" : "return"}
     </button>

@@ -25,6 +25,8 @@ class BookStore {
     }
   };
 
+  bookById = bookID => this.books.find(book => book.id === bookID);
+
   get filteredBooks() {
     return this.books.filter(book =>
       `${book.title}`.toLowerCase().includes(this.query.toLowerCase())
@@ -32,7 +34,7 @@ class BookStore {
   }
 
   filterBooksByColor = bookColor =>
-    this.books.filter(book => book.color === bookColor);
+    this.filteredBooks.filter(book => book.color === bookColor);
 }
 
 decorate(BookStore, {

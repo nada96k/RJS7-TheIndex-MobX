@@ -19,7 +19,7 @@ class BookList extends Component {
     }
     console.log("filtered books by color", books);
 
-    return this.loading ? (
+    return bookStore.loading ? (
       <Loading />
     ) : (
       <div>
